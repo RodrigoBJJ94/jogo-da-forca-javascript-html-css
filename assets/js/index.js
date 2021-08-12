@@ -1,26 +1,26 @@
 
-var biblioteca = ['monitor', 'caderno', 'espada', 'poltrona', 'videogame', 'televisão', 'roupeiro', 'javascript', 'sangue', 'caneta', 'internet', 'programação', 'whisky', 'faculdade', 'lógica', 'controle', 'jaqueta', 'lençol', 'coberta', 'almofada', 'biscoito', 'sushi', 'churrasco', 'barbecue', 'front-end', 'mobile', 'mousepad', 'garrafa', 'canivete', 'perfume'];
-var qtde = biblioteca.length - 1;
-var pos = Math.round(Math.random() * qtde);
-var palavra = biblioteca[pos];
-var tam = palavra.length;
-var cxLetras = [];
-var acertos;
-var errosMax = 7;
-var erros = 0;
-var desenhos = [];
-var acertou = false;
-var jogando = false;
+var library = ['monitor', 'caderno', 'espada', 'poltrona', 'videogame', 'televisão', 'roupeiro', 'javascript', 'sangue', 'caneta', 'internet', 'programação', 'whisky', 'faculdade', 'lógica', 'controle', 'jaqueta', 'lençol', 'coberta', 'almofada', 'biscoito', 'sushi', 'churrasco', 'barbecue', 'front-end', 'mobile', 'mousepad', 'garrafa', 'canivete', 'perfume'];
+var amount = library.length - 1;
+var pos = Math.round(Math.random() * amount);
+var word = library[pos];
+var length = word.length;
+var boxLetters = [];
+var hits;
+var errorsMax = 7;
+var errors = 0;
+var pictures = [];
+var gotIt = false;
+var playing = false;
 var jog;
 
-function defineLetras(l) {
+function defineLetters(l) {
     var obj;
     for (var i = 0; i < 12; i++) {
-        obj = document.getElementById("letra" + i).value = "";
-        obj = document.getElementById("letra" + i).style.display = "none";
+        obj = document.getElementById("letter" + i).value = "";
+        obj = document.getElementById("letter" + i).style.display = "none";
     }
     for (var i = 0; i < l; i++) {
-        obj = document.getElementById("letra" + i).style.display = "inline-block";
+        obj = document.getElementById("letter" + i).style.display = "inline-block";
     }
 }
 
@@ -29,65 +29,65 @@ function jogar() {
     if (jog.value == "") {
         alert("Digite uma letra");
     } else {
-        if (jogando) {
+        if (playing) {
             var obj;
-            var letraTmp;
-            var letra;
+            var letterTmp;
+            var letter;
             var pesq;
-            letra = jog.value;
+            letter = jog.value;
             jog.value = "";
-            acertou = false;
-            pesq = palavra.match(letra);
+            gotIt = false;
+            pesq = word.match(letter);
             while (pesq != null) {
-                letraTmp = palavra.search(letra);
-                obj = document.getElementById("letra" + letraTmp).value = letra;
-                palavra = palavra.replace(letra, '0');
-                acertos++;
-                pesq = palavra.match(letra);
-                acertou = true;
+                letterTmp = word.search(letter);
+                obj = document.getElementById("letter" + letterTmp).value = letter;
+                word = word.replace(letter, '0');
+                hits++;
+                pesq = word.match(letter);
+                gotIt = true;
             }
-            if (!acertou) {
-                document.getElementById("dvletrasdigitadas").innerHTML += letra.toUpperCase() + " ";
-                erros++;
-                if (erros < 7) {
-                    desenhos[erros].style.display = "block";
+            if (!gotIt) {
+                document.getElementById("dvletrasdigitadas").innerHTML += letter.toUpperCase() + " ";
+                errors++;
+                if (errors < 7) {
+                    pictures[errors].style.display = "block";
                 } else {
                     document.getElementById("head").src = "head2.png";
                     document.getElementById("dvmsg").innerHTML = "PERDEU";
-                    jogando = false;
+                    playing = false;
                 }
             }
-            if (acertos == tam) {
+            if (hits == length) {
                 document.getElementById("dvmsg").innerHTML = "GANHOU";
-                jogando = false;
+                playing = false;
             }
         }
     }
 }
 
 function inicia() {
-    jogando = true;
-    jog = document.getElementById("letraJ");
+    playing = true;
+    jog = document.getElementById("letterJ");
     jog.value = "";
     jog.focus();
-    acertos = 0;
-    erros = 0;
-    acertou = false;
+    hits = 0;
+    errors = 0;
+    gotIt = false;
     document.getElementById("dvletrasdigitadas").innerHTML = "Letras Digitadas:";
-    pos = Math.round(Math.random() * qtde);
-    palavra = biblioteca[pos];
-    tam = palavra.length;
-    defineLetras(tam);
+    pos = Math.round(Math.random() * amount);
+    word = library[pos];
+    length = word.length;
+    defineLetters(length);
     document.getElementById("dvmsg").innerHTML = "";
-    desenhos[1] = document.getElementById("head");
-    desenhos[2] = document.getElementById("body");
-    desenhos[3] = document.getElementById("left-arm");
-    desenhos[4] = document.getElementById("right-arm");
-    desenhos[5] = document.getElementById("left-leg");
-    desenhos[6] = document.getElementById("right-leg");
+    pictures[1] = document.getElementById("head");
+    pictures[2] = document.getElementById("body");
+    pictures[3] = document.getElementById("left-arm");
+    pictures[4] = document.getElementById("right-arm");
+    pictures[5] = document.getElementById("left-leg");
+    pictures[6] = document.getElementById("right-leg");
     document.getElementById("head").src = "head1.png";
     for (var i = 1; i < 7; i++) {
-        desenhos[i].style.display = "none";
+        pictures[i].style.display = "none";
     }
 }
 
