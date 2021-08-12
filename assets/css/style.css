@@ -15,12 +15,12 @@
     margin: 5px;
 }
 
-#div-hangman {
+.div-hangman {
     position:absolute;
     left:150px;
 }
 
-#cabeca {
+#head {
     position:absolute;
     top:0px;
     left:0px;
@@ -46,12 +46,12 @@
 
 #left-leg {
     position:absolute;
-    top:450px;
+    top:351px;
     left:-66px;
 }
 
 #right-leg {
     position:absolute;
-    top:450px;
+    top:351px;
     left:105px;
 }

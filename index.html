@@ -1,47 +1,50 @@
 <!doctype html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Jogo da velha</title>
-		<link rel="stylesheet" href="/assets/css/style.css">
-	</head>
-	<body>
 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jogo da velha</title>
+	<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+	<div>
+		<button onclick="start()">Nova Palavra</button>
+	</div>
+	<div>
+		<input type="text" id="letter0" class="letter" maxlength="1">
+		<input type="text" id="letter1" class="letter" maxlength="1">
+		<input type="text" id="letter2" class="letter" maxlength="1">
+		<input type="text" id="letter3" class="letter" maxlength="1">
+		<input type="text" id="letter4" class="letter" maxlength="1">
+		<input type="text" id="letter5" class="letter" maxlength="1">
+		<input type="text" id="letter6" class="letter" maxlength="1">
+		<input type="text" id="letter7" class="letter" maxlength="1">
+		<input type="text" id="letter8" class="letter" maxlength="1">
+		<input type="text" id="letter9" class="letter" maxlength="1">
+		<input type="text" id="letter10" class="letter" maxlength="1">
+		<input type="text" id="letter11" class="letter" maxlength="1">
+	</div>
+	<div>
 		<div>
-			<button onclick="start()">Nova Palavra</button>
+			<input type="text" id="letterJ" class="letterJ" maxlength="1">
+			<button onclick="play()">Jogar</button>
+			<div class="div-msg"></div><br>
+			<div class="div-typed-letters">Letras Digitadas:</div>
 		</div>
-		<div>
-			<input type="text" id="letter0" class="letter" maxlength="1">
-			<input type="text" id="letter1" class="letter" maxlength="1">
-			<input type="text" id="letter2" class="letter" maxlength="1">
-			<input type="text" id="letter3" class="letter" maxlength="1">
-			<input type="text" id="letter4" class="letter" maxlength="1">
-			<input type="text" id="letter5" class="letter" maxlength="1">
-			<input type="text" id="letter6" class="letter" maxlength="1">
-			<input type="text" id="letter7" class="letter" maxlength="1">
-			<input type="text" id="letter8" class="letter" maxlength="1">
-			<input type="text" id="letter9" class="letter" maxlength="1">
-			<input type="text" id="letter10" class="letter" maxlength="1">
-			<input type="text" id="letter11" class="letter" maxlength="1">
+		<div class="div-hangman">
+			<img id="head" src="head1.png">
+			<img id="body" src="body.png">
+			<img id="left-arm" src="left-arm.png">
+			<img id="right-arm" src="right-arm.png">
+			<img id="left-leg" src="left-leg.png">
+			<img id="right-leg" src="right-leg.png">
 		</div>
-		<div>
-			<div>
-				<input type="text" id="letterJ" class="letterJ" maxlength="1">
-				<button onclick="play()">Jogar</button>
-				<div class="div-msg"></div><br>
-				<div class="div-typed-letters">Letras Digitadas:</div>
-			</div>
-			<div id="div-hangman">
-				<img id="head" src="head1.png">
-				<img id="body" src="body.png">
-				<img id="left-arm" src="left-arm.png">
-				<img id="right-arm" src="right-arm.png">
-				<img id="left-leg" src="left-leg.png">
-				<img id="right-leg" src="right-leg.png">
-			</div>
-		</div>
-<script src="/assets/js/index.js"></script>
-	</body>
-</html> 
+	</div>
+	<script src="/assets/js/index.js"></script>
+</body>
+
+</html>
