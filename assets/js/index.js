@@ -1,5 +1,5 @@
 
-var biblioteca = ["javascript", "curso", "computador", "transporte", "livraria", "tecnologia", "controle", "churrasco", "brasil", "impressora", "xicara", "telefone", "internet", "camera", "monitor", "brinquedo", "youtube", "portaria", "escola", "carnaval", "teclado", "guitarra", "bateria", "chinelo", "helicoptero", "arduino"];
+var biblioteca = ['monitor', 'caderno', 'espada', 'poltrona', 'videogame', 'televisão', 'roupeiro', 'javascript', 'sangue', 'caneta', 'internet', 'programação', 'whisky', 'faculdade', 'lógica', 'controle', 'jaqueta', 'lençol', 'coberta', 'almofada', 'biscoito', 'sushi', 'churrasco', 'barbecue', 'front-end', 'mobile', 'mousepad', 'garrafa', 'canivete', 'perfume'];
 var qtde = biblioteca.length - 1;
 var pos = Math.round(Math.random() * qtde);
 var palavra = biblioteca[pos];
@@ -52,13 +52,12 @@ function jogar() {
                 if (erros < 7) {
                     desenhos[erros].style.display = "block";
                 } else {
-                    document.getElementById("cabeca").src = "cabeca2.png";
+                    document.getElementById("head").src = "head2.png";
                     document.getElementById("dvmsg").innerHTML = "PERDEU";
                     jogando = false;
                 }
             }
             if (acertos == tam) {
-                //document.getElementById("dvmsg").innerHTML="";
                 document.getElementById("dvmsg").innerHTML = "GANHOU";
                 jogando = false;
             }
@@ -80,21 +79,16 @@ function inicia() {
     tam = palavra.length;
     defineLetras(tam);
     document.getElementById("dvmsg").innerHTML = "";
-    desenhos[1] = document.getElementById("cabeca");
+    desenhos[1] = document.getElementById("head");
     desenhos[2] = document.getElementById("body");
     desenhos[3] = document.getElementById("left-arm");
     desenhos[4] = document.getElementById("right-arm");
     desenhos[5] = document.getElementById("left-leg");
     desenhos[6] = document.getElementById("right-leg");
-    document.getElementById("cabeca").src = "cabeca1.png";
+    document.getElementById("head").src = "head1.png";
     for (var i = 1; i < 7; i++) {
         desenhos[i].style.display = "none";
     }
-}
-
-function dica() {
-    alert(palavra);
-    jog.focus();
 }
 
 window.addEventListener("load", inicia);
