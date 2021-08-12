@@ -15,7 +15,7 @@ var jog;
 
 function defineLetras(l) {
     var obj;
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < 12; i++) {
         obj = document.getElementById("letra" + i).value = "";
         obj = document.getElementById("letra" + i).style.display = "none";
     }
@@ -81,11 +81,11 @@ function inicia() {
     defineLetras(tam);
     document.getElementById("dvmsg").innerHTML = "";
     desenhos[1] = document.getElementById("cabeca");
-    desenhos[2] = document.getElementById("corpo");
-    desenhos[3] = document.getElementById("bracoE");
-    desenhos[4] = document.getElementById("bracoD");
-    desenhos[5] = document.getElementById("pernaE");
-    desenhos[6] = document.getElementById("pernaD");
+    desenhos[2] = document.getElementById("body");
+    desenhos[3] = document.getElementById("left-arm");
+    desenhos[4] = document.getElementById("right-arm");
+    desenhos[5] = document.getElementById("left-leg");
+    desenhos[6] = document.getElementById("right-leg");
     document.getElementById("cabeca").src = "cabeca1.png";
     for (var i = 1; i < 7; i++) {
         desenhos[i].style.display = "none";
