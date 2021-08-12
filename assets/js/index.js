@@ -11,7 +11,7 @@ var errors = 0;
 var pictures = [];
 var gotIt = false;
 var playing = false;
-var jog;
+var player;
 
 function defineLetters(l) {
     var obj;
@@ -24,9 +24,9 @@ function defineLetters(l) {
     }
 }
 
-function jogar() {
-    jog.focus();
-    if (jog.value == "") {
+function play() {
+    player.focus();
+    if (player.value == "") {
         alert("Digite uma letra");
     } else {
         if (playing) {
@@ -34,8 +34,8 @@ function jogar() {
             var letterTmp;
             var letter;
             var pesq;
-            letter = jog.value;
-            jog.value = "";
+            letter = player.value;
+            player.value = "";
             gotIt = false;
             pesq = word.match(letter);
             while (pesq != null) {
@@ -65,11 +65,11 @@ function jogar() {
     }
 }
 
-function inicia() {
+function start() {
     playing = true;
-    jog = document.getElementById("letterJ");
-    jog.value = "";
-    jog.focus();
+    player = document.getElementById("letterJ");
+    player.value = "";
+    player.focus();
     hits = 0;
     errors = 0;
     gotIt = false;
@@ -91,4 +91,4 @@ function inicia() {
     }
 }
 
-window.addEventListener("load", inicia);
+window.addEventListener("load", start);

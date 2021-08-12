@@ -6,6 +6,7 @@
     margin: 5px;
     display: none;
 }
+
 .letterJ{
     width:30px;
     font-size:30px;
@@ -13,38 +14,42 @@
     text-align: center;
     margin: 5px;
 }
-dvdisplay{
-    display: block;
-}
+
 #dvForca{
     position:absolute;
     left:150px;
 }
+
 #cabeca{
     position:absolute;
     top:0px;
     left:0px;
 }
+
 #body{
     position:absolute;
     top:200px;
     left:105px;
 }
+
 #left-arm{
     position:absolute;
     top:220px;
     left:-17px;
 }
+
 #right-arm{
     position:absolute;
     top:220px;
     left:105px;
 }
+
 #left-leg{
     position:absolute;
     top:450px;
     left:-66px;
 }
+
 #right-leg{
     position:absolute;
     top:450px;
