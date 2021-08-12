@@ -47,18 +47,18 @@ function play() {
                 gotIt = true;
             }
             if (!gotIt) {
-                document.getElementById("dvletrasdigitadas").innerHTML += letter.toUpperCase() + " ";
+                document.querySelector(".div-typed-letters").innerHTML += letter.toUpperCase() + " ";
                 errors++;
                 if (errors < 7) {
                     pictures[errors].style.display = "block";
                 } else {
                     document.getElementById("head").src = "head2.png";
-                    document.getElementById("dvmsg").innerHTML = "PERDEU";
+                    document.querySelector(".div-msg").innerHTML = "PERDEU";
                     playing = false;
                 }
             }
             if (hits == length) {
-                document.getElementById("dvmsg").innerHTML = "GANHOU";
+                document.querySelector(".div-msg").innerHTML = "GANHOU";
                 playing = false;
             }
         }
@@ -73,12 +73,12 @@ function start() {
     hits = 0;
     errors = 0;
     gotIt = false;
-    document.getElementById("dvletrasdigitadas").innerHTML = "Letras Digitadas:";
+    document.querySelector(".div-typed-letters").innerHTML = "Letras Digitadas:";
     pos = Math.round(Math.random() * amount);
     word = library[pos];
     length = word.length;
     defineLetters(length);
-    document.getElementById("dvmsg").innerHTML = "";
+    document.querySelector(".div-msg").innerHTML = "";
     pictures[1] = document.getElementById("head");
     pictures[2] = document.getElementById("body");
     pictures[3] = document.getElementById("left-arm");

@@ -1,4 +1,4 @@
-.letter{
+.letter {
     width:30px;
     font-size:30px;
     text-transform: uppercase;
@@ -7,7 +7,7 @@
     display: none;
 }
 
-.letterJ{
+.letterJ {
     width:30px;
     font-size:30px;
     text-transform: uppercase;
@@ -15,42 +15,42 @@
     margin: 5px;
 }
 
-#dvForca{
+#div-hangman {
     position:absolute;
     left:150px;
 }
 
-#cabeca{
+#cabeca {
     position:absolute;
     top:0px;
     left:0px;
 }
 
-#body{
+#body {
     position:absolute;
     top:200px;
     left:105px;
 }
 
-#left-arm{
+#left-arm {
     position:absolute;
     top:220px;
     left:-17px;
 }
 
-#right-arm{
+#right-arm {
     position:absolute;
     top:220px;
     left:105px;
 }
 
-#left-leg{
+#left-leg {
     position:absolute;
     top:450px;
     left:-66px;
 }
 
-#right-leg{
+#right-leg {
     position:absolute;
     top:450px;
     left:105px;
