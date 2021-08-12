@@ -1,25 +1,24 @@
-
-var library = ['monitor', 'caderno', 'espada', 'poltrona', 'videogame', 'televisão', 'roupeiro', 'javascript', 'sangue', 'caneta', 'internet', 'programação', 'whisky', 'faculdade', 'lógica', 'controle', 'jaqueta', 'lençol', 'coberta', 'almofada', 'biscoito', 'sushi', 'churrasco', 'barbecue', 'front-end', 'mobile', 'mousepad', 'garrafa', 'canivete', 'perfume'];
-var amount = library.length - 1;
-var pos = Math.round(Math.random() * amount);
-var word = library[pos];
-var length = word.length;
-var boxLetters = [];
-var hits;
-var errorsMax = 7;
-var errors = 0;
-var pictures = [];
-var gotIt = false;
-var playing = false;
-var player;
+let library = ['monitor', 'caderno', 'espada', 'poltrona', 'videogame', 'televisão', 'roupeiro', 'javascript', 'sangue', 'caneta', 'internet', 'programação', 'whisky', 'faculdade', 'lógica', 'controle', 'jaqueta', 'lençol', 'coberta', 'almofada', 'biscoito', 'sushi', 'churrasco', 'barbecue', 'front-end', 'mobile', 'mousepad', 'garrafa', 'canivete', 'perfume'];
+let amount = library.length - 1;
+let pos = Math.round(Math.random() * amount);
+let word = library[pos];
+let length = word.length;
+let boxLetters = [];
+let hits;
+let errorsMax = 7;
+let errors = 0;
+let pictures = [];
+let gotIt = false;
+let playing = false;
+let player;
 
 function defineLetters(l) {
-    var obj;
-    for (var i = 0; i < 12; i++) {
+    let obj;
+    for (let i = 0; i < 12; i++) {
         obj = document.getElementById("letter" + i).value = "";
         obj = document.getElementById("letter" + i).style.display = "none";
     }
-    for (var i = 0; i < l; i++) {
+    for (let i = 0; i < l; i++) {
         obj = document.getElementById("letter" + i).style.display = "inline-block";
     }
 }
@@ -30,10 +29,10 @@ function play() {
         alert("Digite uma letra");
     } else {
         if (playing) {
-            var obj;
-            var letterTmp;
-            var letter;
-            var pesq;
+            let obj;
+            let letterTmp;
+            let letter;
+            let pesq;
             letter = player.value;
             player.value = "";
             gotIt = false;
@@ -86,7 +85,7 @@ function start() {
     pictures[5] = document.getElementById("left-leg");
     pictures[6] = document.getElementById("right-leg");
     document.getElementById("head").src = "head1.png";
-    for (var i = 1; i < 7; i++) {
+    for (let i = 1; i < 7; i++) {
         pictures[i].style.display = "none";
     }
 }

@@ -22,36 +22,46 @@
 
 #head {
     position:absolute;
-    top:0px;
+    top:10px;
     left:0px;
 }
 
 #body {
     position:absolute;
-    top:200px;
-    left:105px;
+    top:132px;
+    left:60px;
 }
 
 #left-arm {
     position:absolute;
-    top:220px;
-    left:-17px;
+    top:170px;
+    left:-62px;
 }
 
 #right-arm {
     position:absolute;
-    top:220px;
-    left:105px;
+    top:170px;
+    left:60px;
 }
 
 #left-leg {
     position:absolute;
-    top:351px;
-    left:-66px;
+    top:280px;
+    left:-111px;
 }
 
 #right-leg {
     position:absolute;
-    top:351px;
-    left:105px;
+    top: 280px;
+    left: 60px;
+}
+
+.new-word {
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.button-play {
+    margin-left: 10px;
 }
