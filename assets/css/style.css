@@ -74,13 +74,17 @@ footer p {
 
 @media (max-width: 800px) {
     .letter {
-        width: 25px;
-        height: 25px;
+        width: 23px;
+        height: 23px;
         margin: 1px;
         font-size: 20px;
     }
 
     .letterJ {
         margin-top: 10px;
+    }
+
+    footer p {
+        margin-top: 440px;
     }
 }
