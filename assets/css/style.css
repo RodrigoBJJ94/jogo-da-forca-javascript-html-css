@@ -1,6 +1,6 @@
 .letter {
-    width:30px;
-    font-size:30px;
+    width: 30px;
+    font-size: 30px;
     text-transform: uppercase;
     text-align: center;
     margin: 5px;
@@ -8,50 +8,50 @@
 }
 
 .letterJ {
-    width:30px;
-    font-size:30px;
+    width: 30px;
+    font-size: 30px;
     text-transform: uppercase;
     text-align: center;
     margin: 5px;
 }
 
 .div-hangman {
-    position:absolute;
-    left:150px;
+    position: absolute;
+    left: 150px;
 }
 
 #head {
-    position:absolute;
-    top:10px;
-    left:0px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
 }
 
 #body {
-    position:absolute;
-    top:132px;
-    left:60px;
+    position: absolute;
+    top: 132px;
+    left: 60px;
 }
 
 #left-arm {
-    position:absolute;
-    top:170px;
-    left:-62px;
+    position: absolute;
+    top: 170px;
+    left: -62px;
 }
 
 #right-arm {
-    position:absolute;
-    top:170px;
-    left:60px;
+    position: absolute;
+    top: 170px;
+    left: 60px;
 }
 
 #left-leg {
-    position:absolute;
-    top:280px;
-    left:-111px;
+    position: absolute;
+    top: 280px;
+    left: -111px;
 }
 
 #right-leg {
-    position:absolute;
+    position: absolute;
     top: 280px;
     left: 60px;
 }
@@ -64,4 +64,27 @@
 
 .button-play {
     margin-left: 10px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 530px;
+    font-style: italic;
+}
+
+@media (max-width: 800px) {
+    .letter {
+        width: 18px;
+        height: 18px;
+        margin: -1px;
+        font-size: 20px;
+    }
+
+    .letterJ {
+        margin-top: 10px;
+    }
+
+    footer p {
+        margin-top: 360px;
+    }
 }
