@@ -27,7 +27,9 @@ function defineLetters(l) {
 function play() {
     player.focus();
     if (player.value === "") {
-        alert("Digite uma letra");
+        document.querySelector(".div-msg").innerHTML = "DIGITE UMA LETRA!";
+        document.querySelector(".div-msg").style.color = 'orange';
+        document.querySelector(".div-msg").style.marginTop = '10px';
     } else {
         if (playing) {
             let obj;
@@ -77,7 +79,7 @@ function start() {
     hits = 0;
     errors = 0;
     gotIt = false;
-    document.querySelector(".div-typed-letters").innerHTML = "Letras Digitadas:";
+    document.querySelector(".div-typed-letters").innerHTML = "Letras Digitadas: ";
     pos = Math.round(Math.random() * amount);
     word = library[pos];
     length = word.length;
