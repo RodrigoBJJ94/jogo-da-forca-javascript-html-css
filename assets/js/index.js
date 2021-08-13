@@ -12,6 +12,7 @@ let gotIt = false;
 let playing = false;
 let player;
 
+
 function defineLetters(l) {
     let obj;
     for (let i = 0; i < 12; i++) {
@@ -32,17 +33,17 @@ function play() {
             let obj;
             let letterTmp;
             let letter;
-            let pesq;
-            letter = player.value;
+            let search;
+            letter = player.value.toLowerCase();
             player.value = "";
             gotIt = false;
-            pesq = word.match(letter);
-            while (pesq != null) {
+            search = word.match(letter);         
+            while (search != null) {
                 letterTmp = word.search(letter);
                 obj = document.getElementById("letter" + letterTmp).value = letter;
                 word = word.replace(letter, '0');
                 hits++;
-                pesq = word.match(letter);
+                search = word.match(letter);
                 gotIt = true;
             }
             if (!gotIt) {
@@ -89,5 +90,6 @@ function start() {
         pictures[i].style.display = "none";
     }
 }
+
 
 window.addEventListener("load", start);
