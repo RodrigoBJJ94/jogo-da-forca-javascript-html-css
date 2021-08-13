@@ -1,4 +1,4 @@
-let library = ['monitor', 'caderno', 'espada', 'poltrona', 'videogame', 'televisão', 'roupeiro', 'javascript', 'sangue', 'caneta', 'internet', 'programação', 'whisky', 'faculdade', 'lógica', 'controle', 'jaqueta', 'lençol', 'coberta', 'almofada', 'biscoito', 'sushi', 'churrasco', 'barbecue', 'front-end', 'mobile', 'mousepad', 'garrafa', 'canivete', 'perfume'];
+let library = ['monitor', 'caderno', 'espada', 'poltrona', 'videogame', 'televisão', 'roupeiro', 'javascript', 'sangue', 'caneta', 'internet', 'programar', 'whisky', 'faculdade', 'lógica', 'controle', 'jaqueta', 'lençol', 'coberta', 'almofada', 'biscoito', 'sushi', 'churrasco', 'barbecue', 'front-end', 'mobile', 'mousepad', 'garrafa', 'canivete', 'perfume'];
 let amount = library.length - 1;
 let pos = Math.round(Math.random() * amount);
 let word = library[pos];
@@ -15,7 +15,7 @@ let player;
 
 function defineLetters(l) {
     let obj;
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 10; i++) {
         obj = document.getElementById("letter" + i).value = "";
         obj = document.getElementById("letter" + i).style.display = "none";
     }
