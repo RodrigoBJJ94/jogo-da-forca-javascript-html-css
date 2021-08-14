@@ -62,20 +62,20 @@
 }
 
 .new-word {
-    margin-left: 15px;
+    margin-left: 50px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 .button-play {
     margin-left: 10px;
-    width: 60px;
+    width: 80px;
 }
 
 button {
     border: none;
     background: grey;
-    width: 100px;
+    width: 130px;
     height: 27px;
     background-color: rgb(118, 219, 186);
     border-radius: 5px;
@@ -97,10 +97,12 @@ footer p {
 
     .letterJ {
         margin-top: 10px;
+        width: 23px;
+        height: 35px;
     }
 
     footer p {
-        margin-top: 450px;
+        margin-top: 445px;
     }
 }
 
