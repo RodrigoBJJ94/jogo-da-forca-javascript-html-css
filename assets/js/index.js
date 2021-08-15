@@ -1,4 +1,4 @@
-let library = ['monitor', 'caderno', 'espada', 'poltrona', 'videogame', 'televisão', 'roupeiro', 'sangue', 'caneta', 'internet', 'programar', 'whisky', 'faculdade', 'lógica', 'controle', 'jaqueta', 'lençol', 'coberta', 'almofada', 'biscoito', 'sushi', 'churrasco', 'barbecue', 'front-end', 'mobile', 'mousepad', 'garrafa', 'canivete', 'perfume'];
+let library = ['monitor', 'caderno', 'espada', 'poltrona', 'videogame', 'televisor', 'roupeiro', 'sangue', 'caneta', 'internet', 'programar', 'whisky', 'faculdade', 'coelho', 'controle', 'jaqueta', 'lençol', 'coberta', 'almofada', 'biscoito', 'sushi', 'churrasco', 'barbecue', 'katana', 'mobile', 'mousepad', 'garrafa', 'canivete', 'perfume', 'gabinete'];
 let amount = library.length - 1;
 let pos = Math.round(Math.random() * amount);
 let word = library[pos];
