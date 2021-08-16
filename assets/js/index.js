@@ -27,9 +27,7 @@ function defineLetters(l) {
 function play() {
     player.focus();
     if (player.value === "") {
-        document.querySelector(".div-msg").innerHTML = "DIGITE UMA LETRA!";
-        document.querySelector(".div-msg").style.color = 'orange';
-        document.querySelector(".div-msg").style.marginTop = '10px';
+        swal('Digite uma letra!');
     } else {
         if (playing) {
             let obj;
