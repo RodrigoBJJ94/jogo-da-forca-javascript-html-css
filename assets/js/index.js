@@ -53,14 +53,14 @@ function play() {
                     pictures[errors].style.display = "block";
                 } else {
                     document.getElementById("head").src = "head2.png";
-                    document.querySelector(".div-msg").innerHTML = "PERDEU!";
+                    document.querySelector(".div-msg").innerHTML = "VOCÊ PERDEU!";
                     document.querySelector(".div-msg").style.color = 'red';
                     document.querySelector(".div-msg").style.marginTop = '10px';
                     playing = false;
                 }
             }
             if (hits === length) {
-                document.querySelector(".div-msg").innerHTML = "GANHOU!";
+                document.querySelector(".div-msg").innerHTML = "VOCÊ GANHOU!";
                 document.querySelector(".div-msg").style.color = 'blue';
                 document.querySelector(".div-msg").style.marginTop = '10px';
                 playing = false;
