@@ -89,12 +89,6 @@ button {
     border-radius: 5px;
 }
 
-footer p {
-    text-align: center;
-    margin-top: 680px;
-    font-style: italic;
-}
-
 @media (max-width: 800px) {
     .letter {
         width: 23px;
@@ -108,10 +102,6 @@ footer p {
         width: 23px;
         height: 35px;
     }
-
-    footer p {
-        margin-top: 445px;
-    }
 }
 
 @media (max-width: 350px) {
@@ -124,9 +114,5 @@ footer p {
 
     .letterJ {
         margin-top: 12px;
-    }
-
-    footer p {
-        margin-top: 400px;
     }
 }
